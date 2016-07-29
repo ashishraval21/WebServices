@@ -8,8 +8,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.taqnihome.dao.UserDataDao;
-import com.taqnihome.domain.Student;
-import com.taqnihome.domain.Team;
 import com.taqnihome.domain.User;
 
 

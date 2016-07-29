@@ -10,9 +10,6 @@ import org.hibernate.criterion.Restrictions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
-
-import com.taqnihome.domain.Student;
-import com.taqnihome.domain.Team;
 import com.taqnihome.domain.User;
 
 @Repository
