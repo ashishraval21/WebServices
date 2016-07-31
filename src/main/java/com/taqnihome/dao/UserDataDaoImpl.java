@@ -22,7 +22,6 @@ public class UserDataDaoImpl implements UserDataDao {
 	public String userSignup(User user) {
 		// TODO Auto-generated method stub
 		sessionFactory.getCurrentSession().save(user);
-		
 		return sessionFactory.getCurrentSession().getIdentifier(user).toString();
 	}
 
@@ -39,7 +38,12 @@ public class UserDataDaoImpl implements UserDataDao {
 
 	public User userAvailable(String mac_address) {
 		// TODO Auto-generated method stub
-		return (User) sessionFactory.getCurrentSession().createCriteria(User.class).add(Restrictions.eq("macAddress", mac_address)).list().get(0);
+		List<User> user = sessionFactory.getCurrentSession().createCriteria(User.class).add(Restrictions.eq("macAddress", mac_address)).list();
+	if(user.size() > 0)
+		return user.get(0);
+	return null;
+				
+				
 	}
 	
 	
